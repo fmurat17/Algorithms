@@ -81,3 +81,6 @@ for(i = 0; i < my_vector.size(); i++) cout << my_vector[i] << " ";
 	// Output : 5 0
 
 ---clear(),swap()---
+
+
+
