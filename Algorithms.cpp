@@ -138,6 +138,42 @@
 		quickSort(ar, position - 1);
 		quickSort(ar + position, size - position);
 	}
+
+										################################################
+										!!!!!!!!!!-------Counting Sort--------!!!!!!!!!!
+										################################################
+										
+	--> Time Complexity = O(n + k)
+	
+	Code : 
+	
+	void count(int arr[], int n){
+    
+		int i;
+		int max = arr[0];
+		
+		for(i = 1; i < n; i++){
+			if(arr[i] > max) max = arr[i];
+		}
+		max++;
+		int count[max];
+		
+		for(i = 0; i < max; i++){
+			count[i] = 0;
+		}
+		
+		for(i = 0; i < n; i++){
+			count[arr[i]]++;
+		}
+		
+		for(i = 0; i < max; i++){
+			if(count[i] != 0){
+				cout << i << " ";
+				count[i]--;
+				i--;
+			}
+		}
+	}
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 															PRIME NUMBERS
 	
